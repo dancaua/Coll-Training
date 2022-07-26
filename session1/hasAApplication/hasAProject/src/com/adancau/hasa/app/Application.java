@@ -8,8 +8,14 @@ import static java.util.Objects.nonNull;
 
 public class Application {
 
+
+    static int x;
+    int y;
+
     public static void main(String[] args) {
         Application application = new Application();
+        application.y = 1;
+        application.x = 1;
 
         KYCVerification kycVerification = new KYCVerification("pan number", 1L, "ID", "1243");
         ContactDetails contactDetails = new ContactDetails("1", "Bucharest", "Bucharest", "Romania", "Romania", 1L, 2L, 3L);
@@ -30,6 +36,26 @@ public class Application {
 
         application.changeMobileNumber(account, 0753032761L);
         application.changeEmailId(account, 1L);
+
+         byte b1 = 10;
+         byte b2 = 10;
+         byte s = (byte) (b1 + b2);
+        System.out.println(s);
+        short x = 20;
+        int a = x;
+        long asdas = 1231233l;
+        byte xlong = (byte) asdas;
+        System.out.println(xlong);
+
+        pls(new Integer(1));
+    }
+
+    public static void pls(int x){
+        System.out.println("primitiv");
+    }
+
+    public static void pls(Integer x){
+        System.out.println("wrapper");
     }
 
     public void submitUserDetails() {
